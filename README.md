@@ -1,7 +1,7 @@
-#[Yada Yada](http://www.linktoheroku.com)
+# [Yada Yada](https://yada-yada.herokuapp.com/)
 
 Ever wonder what Slack would be like if it had limited features, extremely gaudy colors, and the infamous IM sounds of
-the 90s? Well, [here's your chance to find out](http://www.linktoheroku.com)!
+the 90s? Well, [here's your chance to find out](https://yada-yada.herokuapp.com/)!
 
 Local setup and account credentials below, but be sure to also read the notes at the end! :)
 
