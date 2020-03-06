@@ -59,7 +59,7 @@ $ npm start
 - Username: Jack80 | Password: heresjohnny
 - Username: Pennywise90 | Password: youllfloattoo
 - Username: Percy99 | Password: drysponge
-- Username: Wendigo89 | Password: whahoohaha
+- Username: Wendigo89 | Password: sometimesdeadisbetter
 
 ### Notes
 

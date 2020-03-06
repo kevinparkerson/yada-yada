@@ -9,7 +9,7 @@ const users = [
 	{ username: 'Jack80', password: 'heresjohnny' },
 	{ username: 'Pennywise90', password: 'youllfloattoo' },
 	{ username: 'Percy99', password: 'drysponge' },
-	{ username: 'Wendigo89', password: 'whahoohaha' }
+	{ username: 'Wendigo89', password: 'sometimesdeadisbetter' }
 ];
 
 const addUsers = async () => {
