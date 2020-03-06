@@ -16,7 +16,7 @@ exports.main = (req, res) => {
 	res.render( 'main', {
 		layout: false,
 		user: req.user,
-		title: 'Yada Yada',
+		title: `Yada Yada | ${req.user.username}`,
 		prod: process.env.NODE_ENV !== 'development'
 	});
 };
