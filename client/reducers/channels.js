@@ -1,10 +1,12 @@
 import {
 	POPULATE_PRIVATE_CHANNELS,
 	SET_HAS_UNREAD_MESSAGES,
+	SET_LAST_VISITED_CHANNEL,
 	SET_ONLINE_STATUS
 } from '../actions/channels';
 
 export const initialState = {
+	lastVisited: 'general',
 	private: [],
 	public: [
 		{
@@ -24,6 +26,12 @@ export default function channels (state = initialState, action) {
 					...action.privateChannels
 				]
 			};
+		}
+		case SET_LAST_VISITED_CHANNEL: {
+			return {
+				...state,
+				lastVisited: action.channelId
+			}
 		}
 		case SET_HAS_UNREAD_MESSAGES: {
 			const channelType = (action.channelId === 'general') ? 'public' : 'private';

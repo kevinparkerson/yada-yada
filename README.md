@@ -80,8 +80,9 @@ $ npm start
 - What are all the features in this app?
     - User login and session persistence. No capacity to add users at the moment but as users are stored in the DB
     creating that feature would not take long.
-    - The ability to see who you're logged-in as and log out.
+    - The ability to see who you're logged in as and log out.
     - The capacity to switch between a public chat channel and private direct messaging channels.
+    - Browser routing between selected channels (back / forward buttons work correctly)
     - IM within the various channels.
     - Slack-like formatting of messages.
     - Persistence for up to 500 messages in private channels and 1000 in the public channel.

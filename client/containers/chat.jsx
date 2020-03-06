@@ -2,7 +2,7 @@ import { push } from 'connected-react-router';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getPrivateChannels, setHasUnreadMessages } from '../actions/channels';
+import { getPrivateChannels, setLastVisitedChannel, setHasUnreadMessages } from '../actions/channels';
 import { getChannelMessages, sendMessage } from '../actions/messages';
 
 import Feed from '../components/feed';
@@ -21,6 +21,7 @@ import '../styles/chat.scss';
 const Chat = () => {
 	// Dispatch and useful items from app store
 	const dispatch = useDispatch();
+	const lastVisitedChannel = useSelector(state => state.channels.lastVisited);
 	const location = useSelector(state => state.router.location);
 	const messages = useSelector(state => state.messages);
 	const privateChannels = useSelector(state => state.channels.private);
@@ -56,16 +57,25 @@ const Chat = () => {
 		setHasRequestedInitialChannelMessages(true);
 	}
 
+	// Syncs current messages with the router / selected channel
+	if (lastVisitedChannel !== selectedChannelId) {
+		// This would be better wrapped up in a single action, but due to time constraints I'm calling multiples
+		dispatch(getChannelMessages(selectedChannelId)).then(() => {
+			dispatch(setLastVisitedChannel(selectedChannelId, false));
+			dispatch(setHasUnreadMessages(selectedChannelId, false));
+		});
+	}
+
 	return (
 		<div className="yada_chat">
 			<div className="yada_chat-sidebar">
 				<Header username={user.username} />
 				<Menu
 					onChannelClick={(channelId) => {
+						// Note: currently 6 container render calls occur when switching channels.
+						// While it doesn't appear to be hurting performance much, reducing this by consolidating
+						// dispatched actions is much more ideal, especially for mobile devices
 						dispatch(push(`/chat/${channelId}`));
-						dispatch(getChannelMessages(channelId)).then(() => {
-							dispatch(setHasUnreadMessages(channelId));
-						});
 					}}
 					publicChannels={publicChannels}
 					privateChannels={privateChannels}

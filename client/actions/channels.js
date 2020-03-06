@@ -4,6 +4,7 @@
 
 export const POPULATE_PRIVATE_CHANNELS = 'POPULATE_PRIVATE_CHANNELS';
 export const SET_HAS_UNREAD_MESSAGES = 'SET_HAS_UNREAD_MESSAGES';
+export const SET_LAST_VISITED_CHANNEL = 'SET_LAST_VISITED_CHANNEL';
 export const SET_ONLINE_STATUS = 'SET_ONLINE_STATUS';
 
 /*
@@ -16,6 +17,10 @@ export function populatePrivateChannels (privateChannels) {
 
 export function setHasUnreadMessages (channelId, hasUnreadMessages) {
 	return { channelId, hasUnreadMessages, type: SET_HAS_UNREAD_MESSAGES };
+}
+
+export function setLastVisitedChannel (channelId) {
+	return { channelId, type: SET_LAST_VISITED_CHANNEL };
 }
 
 export function setOnlineStatus (userStatuses) {
