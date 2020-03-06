@@ -36,16 +36,8 @@ module.exports = {
 				loader: 'url-loader?limit=10000&name=images/[name].[hash].[ext]'
 			},
 			{
-				test: /\.woff2?$/,
-				loader: 'url-loader?limit=30&name=fonts/[name].[ext]'
-			},
-			{
-				test: /\.[ot]tf$/,
-				loader: 'file-loader?name=fonts/[name].[ext]'
-			},
-			{
 				test: /\.wav$/,
-				loader: 'file-loader?name=sounds/[name].[ext]'
+				loader: 'file-loader?name=/sounds/[name].[ext]'
 			}
 		]
 	},
