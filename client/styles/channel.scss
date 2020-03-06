@@ -1,0 +1,47 @@
+.yada_channel {
+	color: #000;
+	cursor: pointer;
+	display: block;
+	padding: 0.25rem 1rem;
+	text-decoration: none;
+
+	&:hover {
+		background: #00d0d3;
+	}
+
+	&-hashtag {
+		display: inline-block;
+		font-size: 1.125rem;
+		line-height: 1;
+		margin: 0 0.375rem 0 0;
+		position: relative;
+		top: 0.125rem;
+		width: 0.625rem;
+	}
+
+	&-status {
+		border: 0.0625rem solid #000;
+		border-radius: 0.3125rem;
+		display: inline-block;
+		height: 0.625rem;
+		margin: 0 0.375rem 0 0;
+		width: 0.625rem;
+
+		&--online {
+			background: #36a410;
+			border: none;
+			//border-color: #26730c;
+		}
+	}
+
+	&--selected, &--selected:hover {
+		background: #f8820c;
+	}
+
+	&--unread {
+		.yada_channel-text {
+			font-weight: bold;
+			font-style: italic;
+		}
+	}
+}

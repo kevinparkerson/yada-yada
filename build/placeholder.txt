@@ -1,0 +1,2 @@
+Placeholder for build directory, since nothing inside build is tracked by git but this file.
+This is the directory where production client code is built and output.

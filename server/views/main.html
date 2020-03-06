@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="initial-scale=1">
+
+		<title>{{title}}</title>
+		<link rel="icon" href="/favicon.ico?" type="image/x-icon">
+
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<meta property="og:title" content="Yada Yada">
+		<meta property="og:description" content="Yada Yada">
+		<meta property="og:site_name" content="Yada Yada">
+
+		<script>
+			window.USER_DATA = {
+				id: '{{user.id}}',
+				username: '{{user.username}}'
+			};
+		</script>
+
+		{{#if prod}}
+			<link href="/main.css" rel="stylesheet">
+		{{else}}
+			<link href="/dev/main.css" rel="stylesheet">
+		{{/if}}
+	</head>
+	<body>
+		<div id="yada_mount"></div>
+
+		{{#if prod}}
+			<script type="text/javascript" src="/main.js"></script></body>
+		{{else}}
+			<script type="text/javascript" src="/dev/main.js"></script></body>
+		{{/if}}
+	</body>
+</html>

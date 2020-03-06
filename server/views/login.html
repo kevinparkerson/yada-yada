@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="initial-scale=1">
+
+		<title>{{title}}</title>
+		<link rel="icon" href="/favicon.ico?" type="image/x-icon">
+
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<meta property="og:title" content="Yada Yada">
+		<meta property="og:description" content="Yada Yada">
+		<meta property="og:site_name" content="Yada Yada">
+
+		{{#if prod}}
+			<link href="/login.css" rel="stylesheet">
+		{{else}}
+			<link href="/dev/login.css" rel="stylesheet">
+		{{/if}}
+	</head>
+	<body>
+		<div class="yada_login">
+			<form action="/login" method="post">
+				<div class="yada_icon"></div>
+				<h1>Yada Yada</h1>
+				{{#if message}}
+					<div class="yada_error-message">{{message}}</div>
+				{{/if}}
+				<input name="username" placeholder="Username*" type="text">
+				<input name="password" placeholder="Password*" type="password">
+				<button type="submit" class="yada_submit">Login</button>
+			</form>
+		</div>
+
+		{{#if prod}}
+			<script src="/login.js"></script>
+		{{else}}
+			<script src="/dev/login.js"></script>
+		{{/if}}
+	</body>
+</html>

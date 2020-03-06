@@ -1,0 +1,14 @@
+.yada_menu {
+	flex: 1 1 auto;
+	padding: 1rem 0;
+
+	&-section {
+		font-size: 1rem;
+		font-weight: bold;
+		padding: 0 1rem 0.25rem;
+
+		&--padded-top {
+			padding-top: 1.25rem;
+		}
+	}
+}

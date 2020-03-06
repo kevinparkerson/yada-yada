@@ -1,0 +1,74 @@
+@import "./base.scss";
+
+body, html {
+	height: 100%;
+}
+
+.yada {
+	&_error-message {
+		background: #f3d8db;
+		border-radius: 0.312rem;
+		color: #692327;
+		padding: 0.625rem;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+
+	&_icon {
+		background: url('../images/yada-yada.png') center center no-repeat;
+		background-size: contain;
+		border-radius: 4rem;
+		height: 8rem;
+		margin: 0 auto;
+		width: 8rem;
+	}
+
+	&_login {
+		align-items: center;
+		background: #ccc;
+		background-size: cover;
+		display: flex;
+		flex-wrap: wrap;
+		height: 100%;
+		justify-content: center;
+		padding: 1rem;
+		position: relative;
+		width: 100%;
+
+		form {
+			background: #000;
+			border-radius: .625rem;
+			padding: 3.438rem;
+			width: 31.25rem;
+
+			h1 {
+				color: #fff;
+				margin: 0.625rem 0;
+				text-align: center;
+			}
+
+			input {
+				border: none;
+				border-radius: 0.3125rem;
+				color: #000;
+				display: block;
+				margin: 0 auto 0.625rem;
+				padding: 0.625rem;
+				width: 18.75rem;
+			}
+		}
+	}
+
+	&_submit {
+		background: #00fbff;
+		border: none;
+		border-radius: 0.3125rem;
+		color: #000;
+		cursor: pointer;
+		display: block;
+		font-size: 1.25rem;
+		margin: 1.5rem auto 0;
+		padding: 0.625rem;
+		width: 9.375rem;
+	}
+}

@@ -1,0 +1,26 @@
+.yada_chat {
+	display: flex;
+	height: 100%;
+	width: 100%;
+
+	&-main {
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+
+		&-feed {
+			flex: 1 1 auto;
+			overflow: auto;
+			padding: 1.25rem 1.25rem 0.625rem;
+		}
+	}
+
+	&-sidebar {
+		background: #00fbff;
+		display: flex;
+		flex: 0 0 auto;
+		flex-direction: column;
+		height: 100%;
+		width: 15rem;
+	}
+}

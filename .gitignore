@@ -1,0 +1,11 @@
+.idea/*
+node_modules/*
+
+build/*
+!build/placeholder.txt
+
+npm-debug.log
+
+dev-notes.txt
+
+.DS_Store
