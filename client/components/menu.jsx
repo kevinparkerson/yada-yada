@@ -30,13 +30,25 @@ const Menu = ({ onChannelClick, privateChannels, publicChannels, selectedChannel
 );
 
 Menu.defaultProps = {
-	onChannelClick: () => {}
+	onChannelClick: () => {},
+	privateChannels: [],
+	publicChannels: []
 };
 
 Menu.propTypes = {
 	onChannelClick: PropTypes.func,
-	privateChannels: PropTypes.array,
-	publicChannels: PropTypes.array,
+	privateChannels: PropTypes.arrayOf(PropTypes.shape({
+		hasUnreadMessages: PropTypes.bool,
+		id: PropTypes.string,
+		isOnline: PropTypes.bool,
+		name: PropTypes.string,
+		userId: PropTypes.string
+	})),
+	publicChannels: PropTypes.arrayOf(PropTypes.shape({
+		hasUnreadMessages: PropTypes.bool,
+		id: PropTypes.string,
+		name: PropTypes.string
+	})),
 	selectedChannelId: PropTypes.string.isRequired
 };
 

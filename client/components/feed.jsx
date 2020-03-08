@@ -54,8 +54,20 @@ const Feed = ({ messages, selectedChannelId }) => {
 	);
 };
 
+Feed.defaultProps = {
+	messages: []
+};
+
 Feed.propTypes = {
-	messages: PropTypes.array.isRequired,
+	messages: PropTypes.arrayOf(PropTypes.shape({
+		channelId: PropTypes.string,
+		date: PropTypes.string,
+		id: PropTypes.string,
+		receiverId: PropTypes.string,
+		senderId: PropTypes.string,
+		senderName: PropTypes.string,
+		value: PropTypes.string
+	})),
 	selectedChannelId: PropTypes.string.isRequired
 };
 
