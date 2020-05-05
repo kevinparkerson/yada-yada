@@ -1,5 +1,3 @@
-[Test Link](#test)
-
 # [Yada Yada](https://yada-yada.herokuapp.com/)
 
 Ever wonder what Slack would be like if it had limited features, extremely gaudy colors, and the infamous IM sounds of
@@ -95,6 +93,3 @@ $ npm start
 - Did you enjoy working on this?
     - Very much so! I might even expand on these features in the future. :)
     
-    
-    
-### Test
