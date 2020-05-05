@@ -1,4 +1,4 @@
-[Test Link](#-test)
+[Test Link](#test)
 
 # [Yada Yada](https://yada-yada.herokuapp.com/)
 
